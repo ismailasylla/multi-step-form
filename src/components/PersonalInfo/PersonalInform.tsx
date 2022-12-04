@@ -13,7 +13,7 @@ type PersonalInfoFormProps = PersonalInfoData & {
   updateFields: (fields: Partial<PersonalInfoData>) => void;
 };
 
-const PersonalInfo = ({
+const PersonalInfoForm = ({
   name,
   email,
   mobileNumber,
@@ -75,4 +75,4 @@ const PersonalInfo = ({
   );
 };
 
-export default PersonalInfo;
+export default PersonalInfoForm;
