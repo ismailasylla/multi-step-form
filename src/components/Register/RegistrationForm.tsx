@@ -9,6 +9,7 @@ import {
   SteperWrapper,
 } from "../RegistrationForm.styled";
 import "./register.css";
+import Swal from "sweetalert2";
 
 type FormData = {
   name: string;
@@ -55,7 +56,7 @@ const RegistrationForm = () => {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!isLastStep) return next();
-    alert("Your application has been submitted. ");
+    Swal.fire("Success!", "Your application has been submitted.!", "success");
   }
 
   return (
