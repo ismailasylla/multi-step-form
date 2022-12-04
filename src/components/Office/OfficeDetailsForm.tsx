@@ -22,7 +22,7 @@ const OfficeDetailsForm = ({
   poBoxNumber,
 }: OfficeDetailsFormProps) => {
   return (
-    <FormWrapper title="Personal Info">
+    <FormWrapper title="Office Details">
       <label>Building Name</label>
       <input
         autoFocus
