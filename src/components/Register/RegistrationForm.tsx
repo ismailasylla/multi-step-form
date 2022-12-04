@@ -8,6 +8,7 @@ import {
   FormContainer,
   SteperWrapper,
 } from "../RegistrationForm.styled";
+import "./register.css";
 
 type FormData = {
   name: string;
@@ -58,22 +59,26 @@ const RegistrationForm = () => {
   }
 
   return (
-    <FormContainer>
-      <form onSubmit={onSubmit}>
-        <SteperWrapper>
-          {currentStepIndex + 1} / {steps.length}
-        </SteperWrapper>
-        {step}
-        <ButtonWrapper>
-          {!isFirstStep && (
-            <button type="button" onClick={back}>
-              Back
+    <>
+      <SteperWrapper style={{ marginTop: "50px" }}>
+        {currentStepIndex + 1} / {steps.length}
+      </SteperWrapper>
+      <FormContainer>
+        <form onSubmit={onSubmit}>
+          {step}
+          <ButtonWrapper>
+            {!isFirstStep && (
+              <button type="button" onClick={back} className="button">
+                Back
+              </button>
+            )}
+            <button type="submit" className="button">
+              {isLastStep ? "Submit" : "Next"}
             </button>
-          )}
-          <button type="submit">{isLastStep ? "Submit" : "Next"}</button>
-        </ButtonWrapper>
-      </form>
-    </FormContainer>
+          </ButtonWrapper>
+        </form>
+      </FormContainer>
+    </>
   );
 };
 

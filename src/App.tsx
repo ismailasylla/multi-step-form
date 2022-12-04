@@ -1,14 +1,20 @@
 import { useState } from "react";
+import styled from "styled-components";
+import NavBar from "./components/NavBar/NavBar";
 import RegistrationForm from "./components/Register/RegistrationForm";
+
+export const Container = styled.div`
+  background-color: #f5f5f5;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h1>ARC</h1>
+    <>
+      <NavBar />
+      <Container>
         <RegistrationForm />
-      </div>
-    </div>
+      </Container>
+    </>
   );
 }
 
