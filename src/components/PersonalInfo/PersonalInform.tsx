@@ -20,6 +20,7 @@ const PersonalInfoForm = ({
   addressLine1,
   addressLine2,
   addressLine3,
+  updateFields,
 }: PersonalInfoFormProps) => {
   return (
     <FormWrapper title="Personal Info">

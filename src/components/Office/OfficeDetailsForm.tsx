@@ -20,6 +20,7 @@ const OfficeDetailsForm = ({
   addressLine1,
   addressLine2,
   poBoxNumber,
+  updateFields,
 }: OfficeDetailsFormProps) => {
   return (
     <FormWrapper title="Office Details">
